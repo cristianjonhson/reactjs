@@ -1,3 +1,4 @@
+import EstadoUsuario from './EstadoUsuario';
 
 
 import './App.css';
@@ -13,6 +14,8 @@ export default function App() {
       <Saludo nombre="Cristian" />
       <Saludo nombre="React" />
       <Saludo nombre="Mundo" />
+      <EstadoUsuario nombre="Cristian" activo={true} />
+      <EstadoUsuario nombre="Invitado" activo={false} />
       <Boton />
     </div>
   );
