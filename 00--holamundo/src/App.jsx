@@ -1,27 +1,26 @@
 
-import { useState } from 'react';
-import EstadoUsuario from './EstadoUsuario';
-
 
 import './App.css';
 import Mensaje from './Mensaje';
-import Boton from './Boton';
 import Saludo from './Saludo';
+import EstadoUsuario from './EstadoUsuario';
 import ContadorPersonalizado from './ContadorPersonalizado';
+import AlertaPersonalizada from './AlertaPersonalizada';
 
-  const [cuenta, setCuenta] = useState(0);
+export default function App() {
   return (
     <div className="app-container">
       <h1>¡Hola Mundo desde React + Vite!</h1>
       <Mensaje />
+      {/* Ejemplo de props */}
       <Saludo nombre="Cristian" />
       <Saludo nombre="React" />
-      <Saludo nombre="Mundo" />
+      {/* Ejemplo de booleanos como props */}
       <EstadoUsuario nombre="Cristian" activo={true} />
       <EstadoUsuario nombre="Invitado" activo={false} />
-      <p className="mensaje">Contador: {cuenta}</p>
-      <ContadorPersonalizado onIncrementar={() => setCuenta(cuenta + 1)} />
-      <Boton />
+      {/* Ejemplo de función como prop */}
+      <ContadorPersonalizado onIncrementar={() => alert('¡Has incrementado el contador (sin estado)!')} />
+      <AlertaPersonalizada onAlerta={() => alert('¡Este es un alert personalizado pasado como prop!')} />
     </div>
   );
 }
