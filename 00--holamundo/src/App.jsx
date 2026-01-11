@@ -14,7 +14,7 @@ export default function App() {
     <div className="app-container">
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 32 }}>
         <PerfilX
-          foto="https://unavatar.io/cristianjonhson"
+          foto="https://pbs.twimg.com/profile_images/1817823055202205696/Jh40yNnz_400x400.jpg"
           nombre="Kate Miller"
           usuario="@KateMillerGems"
           verificado={true}
