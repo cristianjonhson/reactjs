@@ -1,10 +1,10 @@
 import './App.css';
-import Mensaje from './components/Mensaje';
-import Saludo from './components/Saludo';
-import EstadoUsuario from './components/EstadoUsuario';
-import ContadorPersonalizado from './components/ContadorPersonalizado';
-import AlertaPersonalizada from './components/AlertaPersonalizada';
-import PerfilX from './components/PerfilX';
+import Mensaje from './components/mensaje';
+import Saludo from './components/saludo';
+import EstadoUsuario from './components/estado-usuario';
+import ContadorPersonalizado from './components/contador-personalizado';
+import AlertaPersonalizada from './components/alerta-personalizada';
+import PerfilX from './components/perfil-x';
 
 export default function App() {
   return (
