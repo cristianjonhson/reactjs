@@ -1,6 +1,3 @@
-
-
-
 import './App.css';
 import Mensaje from './Mensaje';
 import Saludo from './Saludo';
@@ -12,7 +9,9 @@ import PerfilX from './PerfilX';
 export default function App() {
   return (
     <div className="app-container">
-      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 32 }}>
+      <div
+        style={{ display: 'flex', justifyContent: 'center', marginBottom: 32 }}
+      >
         <PerfilX
           foto="https://pbs.twimg.com/profile_images/1817823055202205696/Jh40yNnz_400x400.jpg"
           nombre="Kate Miller"
@@ -29,8 +28,16 @@ export default function App() {
       <EstadoUsuario nombre="Cristian" activo={true} />
       <EstadoUsuario nombre="Invitado" activo={false} />
       {/* Ejemplo de función como prop */}
-      <ContadorPersonalizado onIncrementar={() => alert('¡Has incrementado el contador (sin estado)!')} />
-      <AlertaPersonalizada onAlerta={() => alert('¡Este es un alert personalizado pasado como prop!')} />
+      <ContadorPersonalizado
+        onIncrementar={() =>
+          alert('¡Has incrementado el contador (sin estado)!')
+        }
+      />
+      <AlertaPersonalizada
+        onAlerta={() =>
+          alert('¡Este es un alert personalizado pasado como prop!')
+        }
+      />
     </div>
   );
 }

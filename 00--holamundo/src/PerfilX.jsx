@@ -1,6 +1,5 @@
-
-import React from "react";
-import "./PerfilX.css";
+import React from 'react';
+import './PerfilX.css';
 
 const PerfilX = ({
   foto,
@@ -22,9 +21,9 @@ const PerfilX = ({
       </div>
       <button
         onClick={onSeguir}
-        className={`perfil-x__boton${siguiendo ? " siguiendo" : ""}`}
+        className={`perfil-x__boton${siguiendo ? ' siguiendo' : ''}`}
       >
-        {siguiendo ? "Siguiendo" : "Seguir"}
+        {siguiendo ? 'Siguiendo' : 'Seguir'}
       </button>
     </div>
   );

@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "prettier": "^3.7.4"
+  },
+  "scripts": {
+    "lint": "eslint \"00--holamundo/src/**/*.{js,jsx}\" --fix"
+  }
+}
