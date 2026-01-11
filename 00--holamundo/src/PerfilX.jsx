@@ -1,4 +1,6 @@
+
 import React from "react";
+import "./PerfilX.css";
 
 const PerfilX = ({
   foto,
@@ -9,48 +11,24 @@ const PerfilX = ({
   siguiendo = false,
 }) => {
   return (
-    <div style={{
-      display: "flex",
-      alignItems: "center",
-      background: "#000",
-      color: "#fff",
-      borderRadius: "999px",
-      padding: "8px 16px",
-      width: "fit-content",
-      fontFamily: 'system-ui, sans-serif',
-    }}>
+    <div className="perfil-x">
       <img
+        className="perfil-x__img"
         src={foto}
         alt={nombre}
-        style={{
-          width: 40,
-          height: 40,
-          borderRadius: "50%",
-          marginRight: 12,
-        }}
       />
-      <div style={{ flex: 1, minWidth: 0 }}>
+      <div className="perfil-x__info">
         <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
-          <span style={{ fontWeight: 600, fontSize: 16 }}>{nombre}</span>
+          <span className="perfil-x__nombre">{nombre}</span>
           {verificado && (
-            <span style={{ color: "#1da1f2", fontSize: 16, marginLeft: 2 }}>✔️</span>
+            <span className="perfil-x__verificado">✔️</span>
           )}
         </div>
-        <div style={{ color: "#8899a6", fontSize: 14 }}>{usuario}</div>
+        <div className="perfil-x__usuario">{usuario}</div>
       </div>
       <button
         onClick={onSeguir}
-        style={{
-          marginLeft: 16,
-          background: siguiendo ? "#222" : "#fff",
-          color: siguiendo ? "#fff" : "#000",
-          border: "none",
-          borderRadius: 999,
-          padding: "6px 18px",
-          fontWeight: 600,
-          cursor: "pointer",
-          fontSize: 15,
-        }}
+        className={`perfil-x__boton${siguiendo ? " siguiendo" : ""}`}
       >
         {siguiendo ? "Siguiendo" : "Seguir"}
       </button>
