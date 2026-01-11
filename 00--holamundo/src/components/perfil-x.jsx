@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./PerfilX.css";
 
 const PerfilX = ({
@@ -6,9 +6,16 @@ const PerfilX = ({
   nombre,
   usuario,
   verificado = false,
-  onSeguir = () => {},
+  onSeguir,
   siguiendo = false,
 }) => {
+  const [isSiguiendo, setIsSiguiendo] = useState(siguiendo);
+
+  const handleSeguir = () => {
+    setIsSiguiendo((prev) => !prev);
+    if (onSeguir) onSeguir(!isSiguiendo);
+  };
+
   return (
     <div className="perfil-x" role="region" aria-label={`Perfil de ${nombre || 'usuario'}`}>
       <img
@@ -29,12 +36,12 @@ const PerfilX = ({
         <div className="perfil-x__usuario">{usuario || '@usuario'}</div>
       </div>
       <button
-        onClick={onSeguir}
-        className={`perfil-x__boton${siguiendo ? " siguiendo" : ""}`}
-        aria-pressed={siguiendo}
-        aria-label={siguiendo ? `Siguiendo a ${nombre || 'usuario'}` : `Seguir a ${nombre || 'usuario'}`}
+        onClick={handleSeguir}
+        className={`perfil-x__boton${isSiguiendo ? " siguiendo" : ""}`}
+        aria-pressed={isSiguiendo}
+        aria-label={isSiguiendo ? `Siguiendo a ${nombre || 'usuario'}` : `Seguir a ${nombre || 'usuario'}`}
       >
-        {siguiendo ? "Siguiendo" : "Seguir"}
+        {isSiguiendo ? "Siguiendo" : "Seguir"}
       </button>
     </div>
   );
