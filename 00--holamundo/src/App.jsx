@@ -9,9 +9,7 @@ import PerfilX from './components/perfil-x';
 export default function App() {
   return (
     <div className="app-container">
-      <div
-        style={{ display: 'flex', justifyContent: 'center', marginBottom: 32 }}
-      >
+      <div className="perfil-lista">
         <PerfilX
           foto="https://pbs.twimg.com/profile_images/1817823055202205696/Jh40yNnz_400x400.jpg"
           nombre="Kate Miller"
