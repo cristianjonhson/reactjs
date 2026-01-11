@@ -18,7 +18,7 @@ const PerfilX = ({
         alt={nombre}
       />
       <div className="perfil-x__info">
-        <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+        <div className="perfil-x__fila-nombre">
           <span className="perfil-x__nombre">{nombre}</span>
           {verificado && (
             <span className="perfil-x__verificado">✔️</span>

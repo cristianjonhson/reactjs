@@ -16,6 +16,12 @@
   margin-right: 12px;
 }
 
+.perfil-x__fila-nombre {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .perfil-x__info {
   flex: 1;
   min-width: 0;
