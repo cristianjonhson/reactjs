@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./PerfilX.css";
+import "./perfil-x.css";
 
 const PerfilX = ({
   foto,
