@@ -4,19 +4,12 @@ import Saludo from './components/saludo';
 import EstadoUsuario from './components/estado-usuario';
 import ContadorPersonalizado from './components/contador-personalizado';
 import AlertaPersonalizada from './components/alerta-personalizada';
-import PerfilX from './components/perfil-x';
+import PerfilesContainer from './components/perfiles-container';
 
 export default function App() {
   return (
     <div className="app-container">
-      <div className="perfil-lista">
-        <PerfilX
-          foto="https://pbs.twimg.com/profile_images/1817823055202205696/Jh40yNnz_400x400.jpg"
-          nombre="Kate Miller"
-          usuario="@KateMillerGems"
-          verificado={true}
-        />
-      </div>
+      <PerfilesContainer />
       <h1>¡Hola Mundo desde React + Vite!</h1>
       <Mensaje />
       {/* Ejemplo de props */}
